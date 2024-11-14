@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Ticket - IT Service Help Desk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>IT Service Help Desk</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="create_ticket.html">Create Ticket</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Create New Ticket</h2>
+        <form action="dashboard.html" method="post">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+        
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required></textarea>
+        
+            <label for="category">Category</label>
+            <select id="category" name="category">
+                <option value="network">Network</option>
+                <option value="hardware">Hardware</option>
+                <option value="software">Software</option>
+            </select>
+        
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+        
+            <!-- ปุ่ม Submit และ Cancel -->
+            <div class="button-group">
+                <button type="submit" class="btn-submit">Submit Ticket</button>
+                <button type="button" class="btn-cancel" onclick="window.location.href='dashboard.html';">Cancel</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
